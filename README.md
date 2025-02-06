@@ -1,4 +1,4 @@
-# dev-assessment (15 - 20 min)
+# dev-assessment (20 - 30 min)
 
 # Optimisation d'une Requête SQL Lente dans Odoo
 
