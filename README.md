@@ -1,4 +1,21 @@
-# dev-assessment (20 - 30 min)
+# Senior Dev Assessment
+
+# -- Odoo Functional (15 min)--
+
+### Question 1:
+
+Comment configurer un workflow dans Odoo pour gérer le processus de validation des factures dans une entreprise de services, en prenant en compte qu'une facture doit être validée par un responsable de département avant d'être envoyée au client ? Quels outils Odoo à utiliser pour cela et comment les configurer ?
+
+### Question 2:
+
+Comment gérer l'inventaire d'une entreprise ayant plusieurs entrepôts et des produits avec des dates de d'éxpiration ? Comment configurer Odoo pour s'assurer que les produits sont correctement stockés et suivis par numéro de lot et date d'éxpiration, et qu'une alerte est envoyée lorsque des produits arrivent à expiration ?
+
+## Question 3:
+
+Dans un scénario où une entreprise utilise Odoo pour gérer les ventes, comment configurer le système pour permettre à un vendeur de transformer un devis en commande sans changer les prix définis au préalable, tout en permettant une gestion flexible des remises sur certains articles du devis ? Quel impact cela aurait-il sur les reports de performance et les marges ?
+
+
+# -- Odoo Technical (20 - 30 min)--
 
 # Optimisation d'une Requête SQL Lente dans Odoo
 
