@@ -79,3 +79,98 @@ Votre entreprise gère des installations électriques à l'aide d'Odoo. Vous sou
 ```xml
 <button name="XXX" type="object" string="XXX" class="oe_highlight" attrs="{XXX}"/>
 ```
+
+# Développement d'un flux utilisateur web
+
+## Context :
+Tu travailles en tant que développeur Odoo et tu dois mettre en place un flux de formulaires en plusieurs étapes. Ces formulaires sont utilisés par des utilisateurs externes (non connectés à Odoo) pour soumettre des informations qui seront liées à un lead dans le CRM.
+
+Ce flux doit respecter plusieurs contraintes :
+1.	Suivi des étapes : L'utilisateur ne peut pas sauter d'étape sans avoir rempli les formulaires précédents.
+2.	Validation des données : Les champs doivent être correctement remplis et validés pour éviter toute incohérence ou injection de données indésirables.
+3.	Bonne structuration du code : La logique métier doit être placée dans le modèle et non dans le contrôleur pour assurer la cohérence du processus.
+4.	Accès sécurisé sans connexion Odoo : L’utilisateur doit pouvoir remplir les formulaires sans être connecté à Odoo, mais les données doivent rester protégées et liées à son lead.
+
+### Contrôler le flux utilisateur sur différentes étapes de formulaires
+
+Q : Comment empêcher un utilisateur d’accéder à une étape ultérieure si les étapes précédentes ne sont pas complètes ?
+
+Q : Comment gérer le stockage temporaire des données d’un formulaire avant validation finale ?
+
+Q : Quelle solution proposerais-tu pour qu'un utilisateur ne puisse pas modifier un formulaire déjà validé ?
+
+### Bonne pratique d’enregistrement des champs
+
+Q : Comment éviter l’injection de données indésirables via un formulaire Odoo ?
+
+### Séparation du code business et des contrôleurs
+
+Q : Pourquoi est-il préférable de mettre une partie du code business dans le modèle plutôt que dans le contrôleur ?
+
+Q : Comment organiser le code pour s’assurer que les règles métier s’appliquent quel que soit le point d’entrée dans le système ?
+
+Q : Peux-tu donner un exemple où une règle métier mal placée dans un contrôleur pourrait poser problème ?
+
+### Accès aux données sans authentification Odoo
+
+Q : Comment permettre à un utilisateur d’accéder à un flux de formulaires lié à un lead sans être connecté à Odoo ?
+
+Q : Quels sont les risques de sécurité à prendre en compte en exposant un formulaire accessible publiquement ?
+
+### Gestion des pages web et leurs performances
+
+Q : Comment optimiser les images pour améliorer la performance d’une page HTML ?
+
+Q : Quels éléments HTML permettent d’améliorer le SEO et l’accessibilité d’une page ?
+
+# Odoo et le framework html
+
+Q : Quel framework html/css est intégré à Odoo, et quelles sont les principales classes CSS que l'on peut utiliser directement dans les vues Odoo ?
+
+Q : Comment personnaliser l'apparence d'un module Odoo en utilisant Bootstrap sans modifier directement les fichiers CSS d'Odoo ?
+
+Q : Quels sont les avantages et les limites de l'utilisation de Bootstrap dans le développement d'interfaces utilisateur pour Odoo ?
+
+# Odoo et le Javascript
+
+### Questions générales
+
+Q : Peux-tu expliquer la différence entre le framework JavaScript legacy (Widgets) et OWL dans Odoo ?
+
+Q : Quels sont les avantages d’OWL par rapport au système de widgets hérité d’Odoo ?
+
+Q : Dans quel cas choisirais-tu encore d’utiliser le framework legacy au lieu d’OWL ?
+
+### Questions sur les Widgets
+
+Q : Comment fonctionne l’héritage dans le système de Widgets d’Odoo ?
+
+Q : Qu’est-ce qu’un "QWeb template" et comment l’utiliser dans un widget ?
+
+Q : Comment peux-tu communiquer entre deux widgets en JavaScript dans Odoo ?
+
+Q : Comment attaches-tu un événement (click, change...) dans un widget et comment l’exécutes-tu ?
+
+### Questions sur OWL
+
+Q : Peux-tu expliquer comment est structuré un composant OWL et comment on le définit ? 
+
+Q : Peux-tu expliquer comment fonctionne la gestion d’état (state) dans OWL ?
+
+Q : Quelle est la différence entre les hooks onWillStart, onMounted et onWillUnmount dans OWL ?
+
+Q : Comment faire passer des données d’un composant parent à un composant enfant en OWL ?
+
+### Questions sur les requêtes RPC et la gestion asynchrone
+
+Q : Comment fonctionnent les Promises en JavaScript dans Odoo, et pourquoi sont-elles utilisées dans les requêtes RPC ?
+
+Q : Comment fais-tu une requête RPC en JavaScript dans Odoo pour récupérer des données d’un modèle ?
+
+Q : Pourquoi utilise-t-on async/await pour les requêtes RPC au lieu des promesses classiques ?
+
+Q : Que se passe-t-il si une requête RPC prend trop de temps à répondre ? Comment l’optimiser ?
+
+Q : Comment créer une route JSON en Python dans Odoo et l’appeler en JavaScript ?
+
+
